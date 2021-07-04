@@ -9,8 +9,8 @@ let apiURL = "https://ipinfo.io/json";
 
 const getIP = async () => {
   let IPData = await fetch(apiURL).then((j) => j.json());
-  console.log(IPData.ip);
-  IP = IPData.ip;
+  console.log(IPData);
+  IP = IPData;
   // {ip: "167.99.230.64", city: "North Bergen",  …}
 };
 
@@ -21,8 +21,11 @@ function writeData() {
 
   firebase.database().ref("User").set({
     name: input.val(),
-    time: timeNow.toDateString(),
-    ip: IP,
+    day: timeNow.toDateString(),
+    hour: timeNow.getHours(),
+    ip: IP.ip,
+    city: IP.city,
+    country: IP.country,
   });
 }
 
