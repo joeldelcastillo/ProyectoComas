@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./mychart.css" />
+    <title>Estadísticas</title>
+  </head>
+  <body>
+    <div class="maincontainer">
+      <div class="container">
+        <canvas id="myChart"></canvas>
+      </div>
+
+      <div class="container">
+        <canvas id="myChart2"></canvas>
+      </div>
+    </div>
+  </body>
+
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase.js"></script>
+  <script src="./server.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.4.1/chart.min.js"
+    integrity="sha512-5vwN8yor2fFT9pgPS9p9R7AszYaNn0LkQElTXIsZFCL7ucT8zDCAqlQXDdaqgA1mZP47hdvztBMsIoFxq/FyyQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script src="./data.js"></script>
+  <script src="./chart.js"></script>
+</html>
